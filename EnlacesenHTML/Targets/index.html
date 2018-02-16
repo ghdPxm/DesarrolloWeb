@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Targets</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <header role="banner"> <!-- la etiqueta header delimita el area de encabezado de la pagina -->
+        <div class="logo">
+          <img src="img/logo.png" alt="logo empresa">
+        </div>
+        <nav class="navegacion" role="navigation"><!-- la etiequeta nav permite definir donde se ubica la barra de navegacion -->
+          <ul>
+            <li type="circle"> <a href="nosotros.html">Sobre nosotros</a> </li>
+            <li> <a href="#">Sobre Cursos</a> </li>
+            <li> <a href="http://www.google.com" target="_blank">Ir a Google</a> </li>
+            <li> <a href="#noticias">Ir a noticias</a> </li>
+          </ul>
+        </nav>
+    </header>
+    <main class="contenido-principal" role="main"><!-- La etiqueta main define el contenido principal de la pagina -->
+      <section><!-- la etiqueta section permite delimiar y agrupar contenidos -->
+        <h2>Nuestros cursos</h2><!-- Acompaña la definicion de la seccion -->
+        <div class="">
+          <h3>HTML 5</h3>
+          <img src="img/html5.png" alt="" height="200">
+          <a href="programa-html5.pdf" >Ver y Descargar Programa</a>
+          <a href="programa-html5.pdf" download >Descargar Programa</a>
+        </div>
+        <div class="">
+          <h3>CSS 3</h3>
+          <img src="img/css3.png" alt="" height="200">
+        </div>
+        <div class="">
+          <h3>JavaScript</h3>
+          <img src="img/js.jpg" alt="" height="200">
+        </div>
+      </section>
+      <section id="noticias">
+        <h2>Ultimas noticias</h2>
+        <article class="" role="article"><!-- Los articulos estan destinados para entradas de blog, noticias, mensajes de foros, etc. -->
+          <h3>Aprender a programar en el siglo XXI</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        <article class="" role="article">
+          <h3>Aprender a programar en el siglo XXI</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </section>
+    </main>
+    <aside class="" role="complementary"><!-- Define una area de contenido lateral al contenido principal (de 2a relevancia) -->
+      <h2>Proximos cursos</h2>
+      <div class="">
+        <h3>PHP</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="">
+        <h3>MySQL</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </aside>
+    </div>
+    <footer role="contentinfo"><!-- Define la parte inferior de la pagina, se colocan barras de navegacion, acerca de, enlaces a redes sociales -->
+      <div class="nosotros">
+        <h3>Sobre nuestra escuela</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="menu" role="navigation">
+        <nav class="navegacion">
+          menu aqui
+        </nav>
+      </div>
+      <p>Cursos de diseño web &mdash; Todos los derechos reservados &copy;</p>
+    </footer>
+  </body>
+</html>
