@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formularios y campos button</title>
+  </head>
+  <body>
+    <h2>Creando los Formularios</h2>
+    <form class="formulario" action="index.html" method="">
+      <fieldset><!-- Permite agrupar elementos en un formulario -->
+          <legend>Tus datos</legend><!-- Muestra una especie de letrero para el fieldset -->
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" autocomplete="on" value="">
+
+          <br><br>
+
+          <label for="apellido">Apellido:</label>
+          <input type="text" name="apellido" id="apellido" placeholder="Tu apellido" autocomplete="on" value="">
+
+          <br><br>
+          <!-- Los radios estara agrupados por el atributo name de cada input -->
+          <label for="genero">Genero:</label><br>
+          <input type="radio" id="genero" name="genero" value="masculino" checked autofocus>Masculino <br>
+          <input type="radio" id="genero" name="genero" value="femenino">Femenino <br>
+          <input type="radio" id="genero" name="genero" value="otro">Otro
+
+      </fieldset>
+      <fieldset>
+        <legend>Informacion sobre tu turno</legend>
+        <!-- los select permiten agrupar una serie de elemetnos de los cuales solo se puede elegir uno -->
+        <label for="turno">Turno:</label>
+        <select id="turno" class="turno" name="turno">
+          <option value="matutino">Matutino</option>
+          <option value="vespertino" selected>Vespertino</option>
+          <option value="nocturno">Nocturno</option>
+        </select>
+
+        <br><br>
+
+        <!-- Los elementos de tipo datalist permiten agrupar elementos pero con la propiedad de autocomplementado -->
+        <label for="propuesta">Que curso te gustaria que agregaramos?</label>
+        <input list="propuesta" name="encuesta">
+        <datalist id="propuesta">
+          <option value="JQuery">
+          <option value="Aplicaciones Web">
+          <option value="Angular JS">
+          <option value="Bootstrap">
+        </datalist>
+
+        <br><br>
+
+        <!-- Los input de tipo checkbox permiten seleccionar varios elementos de un grupo de ellos -->
+        <label for="cursos">Elige tus cursos:</label><br>
+        <input type="checkbox" name="cursos" value="php" id="curso-php">PHP <br>
+        <input type="checkbox" name="cursos" value="html" id="curso-html">HTML5 <br>
+        <input type="checkbox" name="cursos" value="css" id="curso-css">CSS3 <br>
+        <input type="checkbox" name="cursos" value="mysql" id="curso-mysql">MySQL <br>
+        <input type="checkbox" name="cursos" value="javascript" id="curso-javascript">JavaScript <br>
+        <input type="checkbox" name="cursos" value="jquery" id="curso-jquery">jQuery <br>
+
+
+      </fieldset>
+        <br><br>
+
+        <!-- los botones sirven para realizar acciones antes de que el formulario sea enviado -->
+        <button type="reset" name="btn-reset" disabled>Cancelar</button>
+        <!--
+        tambien es posible encontrar la implementacion  de un button de tipo submit, de la siguiente manera
+      <button type="submit" name="btn-enviar">Enviar</button>
+       -->
+        <input type="submit" name="btn-enviar" value="Enviar">
+    </form>
+  </body>
+</html>

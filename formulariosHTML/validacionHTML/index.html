@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formularios y campos input emial</title>
+  </head>
+  <body>
+    <h2>Creando los Formularios</h2>
+    <form class="formulario" action="index.html" method="">
+      <fieldset><!-- Permite agrupar elementos en un formulario -->
+          <legend>Tus datos</legend><!-- Muestra una especie de letrero para el fieldset -->
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" required placeholder="Tu nombre" autocomplete="on" value="">
+
+          <br><br>
+
+          <label for="apellido">Apellido:</label>
+          <input type="text" name="apellido" id="apellido" required placeholder="Tu apellido" autocomplete="on" value="">
+
+          <br><br>
+          <!-- Los radios estara agrupados por el atributo name de cada input -->
+          <label for="genero">Genero:</label><br>
+          <input type="radio" id="genero" name="genero" value="masculino" checked autofocus>Masculino <br>
+          <input type="radio" id="genero" name="genero" value="femenino">Femenino <br>
+          <input type="radio" id="genero" name="genero" value="otro">Otro
+          <br><br>
+          <!-- los input de tipo date permiten seleccionar fechas en diferentes presentaciones -->
+          <label for="">Fecha de nacimiento:</label>
+          <input type="date" name="fecha"><br>
+          <!-- existe una variante para mostrar la fecha pero tambien cargar la hora -->
+          <label for="">Fecha y hora de nacimiento:</label>
+          <input type="datetime-local" name="fecha">
+
+          <br><br>
+
+          <!-- los input de tipo email validan que se escriba el patron de un correo electronico -> correo@servidor.dominio -->
+          <label for="email">Correo electronico:</label>
+          <input type="email" id="email" name="email" required placeholder="correo@dominio.com">
+
+          <br><br>
+
+          <!-- Los input de tipo url validan que se escriba el patron de una pagina web -> http://www.dominio.com -->
+          <label for="sitio-web">Tu sitip web:</label>
+          <input type="url" name="sitio-web" id="sitio-web" placeholder="http://wwww.dominio.com">
+
+          <br><br>
+
+          <!-- Los input de tipo range permiten generar un rango para ser seleccionado -->
+          <label for="puntaje-html">Cuanto sabes de HTML ? </label>
+          <input type="range" name="puntaje-html"  id="puntaje-html" min="0" max="10" list="puntaje">
+          <datalist id="puntaje">
+            <option value="0">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+            <option value="5">
+            <option value="6">
+            <option value="7">
+            <option value="8">
+            <option value="9">
+            <option value="10">
+          </datalist>
+
+          <br><br>
+
+          <!-- El input de tipo number permite mostrar una lista de valores de los cuales solo sera posible la seleccion de uno -->
+          <label for="cantidad-acompanantes">Cuantas personas vienen contigo?</label>
+          <input type="number" name="cantidad-acompanantes" min="1" max="5">
+
+
+
+
+      </fieldset>
+      <fieldset>
+        <legend>Informacion sobre tu turno</legend>
+        <!-- los select permiten agrupar una serie de elemetnos de los cuales solo se puede elegir uno -->
+        <label for="turno">Turno:</label>
+        <select id="turno" class="turno" name="turno">
+          <option value="matutino">Matutino</option>
+          <option value="vespertino" selected>Vespertino</option>
+          <option value="nocturno">Nocturno</option>
+        </select>
+
+        <br><br>
+
+        <!-- Los elementos de tipo datalist permiten agrupar elementos pero con la propiedad de autocomplementado -->
+        <label for="propuesta">Que curso te gustaria que agregaramos?</label>
+        <input list="propuesta" name="encuesta">
+        <datalist id="propuesta">
+          <option value="JQuery">
+          <option value="Aplicaciones Web">
+          <option value="Angular JS">
+          <option value="Bootstrap">
+        </datalist>
+
+        <br><br>
+
+        <!-- Los input de tipo checkbox permiten seleccionar varios elementos de un grupo de ellos -->
+        <label for="cursos">Elige tus cursos:</label><br>
+        <input type="checkbox" name="cursos" value="php" id="curso-php">PHP <br>
+        <input type="checkbox" name="cursos" value="html" id="curso-html">HTML5 <br>
+        <input type="checkbox" name="cursos" value="css" id="curso-css">CSS3 <br>
+        <input type="checkbox" name="cursos" value="mysql" id="curso-mysql">MySQL <br>
+        <input type="checkbox" name="cursos" value="javascript" id="curso-javascript">JavaScript <br>
+        <input type="checkbox" name="cursos" value="jquery" id="curso-jquery">jQuery <br>
+
+          <br><br>
+
+          <!-- los input de tipo month permiten seleccionar el mes de un año -->
+          <label for="">Mes en que deseas iniciar el curso:</label>
+          <input type="month" name="" required value=""><br>
+          <!-- los input de tipo time permiten seleccionar solo la hora en am o pm -->
+          <label for="">Hora en que deseas iniciar el curso:</label>
+          <input type="time" name="" required  value=""><br>
+          <!-- los input de tipo week permiten seleccionar solo la semana del año -->
+          <label for="">Semana en que deseas iniciar el curso:</label>
+          <input type="week" name="" required value=""><br>
+
+      </fieldset>
+      <fieldset>
+        <legend>Extra</legend>
+        <label for="">Las primeras 10 personas reciben una camisa gratis, elige el color:</label>
+        <!-- los input de tipo color permiten mostrar una paleta de colores para su seleccion -->
+        <input type="color" name="color">
+      </fieldset>
+      <fieldset>
+        <legend>Usuaro y Password</legend>
+        <label for="usuario">Usuario:</label><br>
+        <input type="text" name="usuario" required id="usuario" placeholder="Usuario"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" required  id="password" placeholder="Password">
+      </fieldset>
+        <br><br>
+
+
+        <!-- los botones sirven para realizar acciones antes de que el formulario sea enviado -->
+        <button type="reset" name="btn-reset" disabled>Cancelar</button>
+        <!--
+        tambien es posible encontrar la implementacion  de un button de tipo submit, de la siguiente manera
+      <button type="submit" name="btn-enviar">Enviar</button>
+    -->
+        <input type="submit" name="btn-enviar" value="Enviar">
+    </form>
+  </body>
+</html>

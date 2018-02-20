@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formularios y campos fieldset  y legend</title>
+  </head>
+  <body>
+    <h2>Creando los Formularios</h2>
+    <form class="formulario" action="index.html" method="post">
+      <fieldset><!-- Permite agrupar elementos en un formulario -->
+          <legend>Tus datos</legend><!-- Muestra una especie de letrero para el fieldset -->
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" autocomplete="on" value="">
+          <br><br>
+          <label for="apellido">Apellido:</label>
+          <input type="text" name="apellido" id="apellido" placeholder="Tu apellido" autocomplete="on" value="">
+      </fieldset>
+        <br><br>
+        <input type="submit" name="btn-enviar" value="Enviar">
+    </form>
+  </body>
+</html>
